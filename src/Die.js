@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import './Die.css';
 class Die extends Component {
   setClass(dieVal) {
     let num;
@@ -14,16 +14,12 @@ class Die extends Component {
     } else if (dieVal === 5) {
       num = 'five';
     } else {
-      num = 'six'
+      num = 'six';
     }
     return `fas fa-dice-${num}`;
   }
   render() {
-    return (
-      <div className="Die">
-        <i className={this.setClass(this.props.facevalue)}></i>
-      </div>
-    )
+    return <i className={`Die ${this.setClass(this.props.facevalue)}`} />;
   }
 }
 
