@@ -19,7 +19,12 @@ class Die extends Component {
     return `fas fa-dice-${num}`;
   }
   render() {
-    return <i className={`Die ${this.setClass(this.props.facevalue)}`} />;
+    return (
+      <i
+        className={`Die ${this.setClass(this.props.facevalue)} ${this.props
+          .rolling && 'shaking'}`}
+      />
+    );
   }
 }
 
